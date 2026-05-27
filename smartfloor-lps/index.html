@@ -249,25 +249,8 @@
       font-size: 19px;
       line-height: 1.62;
       color: var(--muted);
-      margin: 0 0 28px;
+      margin: 0;
       max-width: 580px;
-    }
-
-    .mini-info {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 26px;
-    }
-
-    .mini-info span {
-      background: var(--offwhite);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 9px 13px;
-      font-size: 13px;
-      font-weight: 800;
-      color: var(--graphite);
     }
 
     /* =====================================================
@@ -420,6 +403,14 @@
       padding: 0 0 28px;
     }
 
+    .footer small {
+      display: block;
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--muted);
+      opacity: 0.85;
+    }
+
     /* =====================================================
        RESPONSIVO
     ===================================================== */
@@ -513,12 +504,6 @@
               Escolha abaixo a página ideal para conhecer as soluções da SmartFloor One 
               e solicitar um orçamento direto pelo WhatsApp.
             </p>
-
-            <div class="mini-info">
-              <span>Tapetes personalizados</span>
-              <span>Pisos laminados PVC</span>
-              <span>Grama sintética</span>
-            </div>
           </div>
 
           <div class="links-grid">
@@ -569,7 +554,8 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      SmartFloor One • Soluções em tapetes, pisos e revestimentos
+      <div>SmartFloor One • Soluções em tapetes, pisos e revestimentos</div>
+      <small>Desenvolvido por Mikael Nakano</small>
     </div>
   </footer>
 </body>
