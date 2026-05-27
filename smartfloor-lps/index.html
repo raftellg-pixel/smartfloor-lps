@@ -1,1 +1,576 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SmartFloor One - Landing Pages</title><style>body{font-family:Arial,sans-serif;margin:0;background:#f4fbfa;color:#12201f}.wrap{min-height:100vh;display:grid;place-items:center;padding:30px}.card{background:#fff;border-radius:24px;padding:34px;max-width:720px;box-shadow:0 18px 45px rgba(15,118,110,.16)}h1{margin-top:0}a{display:block;background:#0f766e;color:#fff;text-decoration:none;padding:16px 18px;border-radius:14px;margin:12px 0;font-weight:800}</style></head><body><div class="wrap"><div class="card"><h1>SmartFloor One</h1><p>Landing pages para campanhas:</p><a href="/tapete-personalizado/">Tapete Personalizado</a><a href="/piso-laminado-pvc/">Piso Laminado em PVC</a><a href="/grama-sintetica/">Grama Sintética</a></div></div></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SmartFloor One | Landing Pages</title>
+
+  <meta 
+    name="description" 
+    content="Landing pages da SmartFloor One para tapetes personalizados, pisos laminados em PVC e grama sintética." 
+  />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+  <style>
+    /* =====================================================
+       SMARTFLOOR ONE — PÁGINA PRINCIPAL
+    ===================================================== */
+
+    :root {
+      --black: #050505;
+      --graphite: #151515;
+
+      --green: #9cab3d;
+      --green-dark: #6f7d24;
+      --green-soft: #eef3d8;
+
+      --blue: #139bd7;
+      --blue-dark: #0878aa;
+      --blue-soft: #e8f6fc;
+
+      --orange: #d9511e;
+      --orange-dark: #b63f14;
+      --orange-soft: #fff0e8;
+
+      --yellow: #f2a51f;
+      --yellow-soft: #fff6df;
+
+      --text: #151515;
+      --muted: #626b68;
+      --line: #e4e7df;
+      --white: #ffffff;
+      --offwhite: #fbfbf7;
+
+      --radius: 28px;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
+      --shadow-soft: 0 14px 34px rgba(0, 0, 0, 0.07);
+
+      --container: 1080px;
+    }
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(242, 165, 31, 0.14), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(19, 155, 215, 0.16), transparent 32%),
+        linear-gradient(135deg, #ffffff 0%, #fbfbf7 48%, #eef3d8 100%);
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--container), 92%);
+      margin: 0 auto;
+    }
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .site-header {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .header-content {
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 12px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      height: 70px;
+      width: auto;
+      max-width: 270px;
+      object-fit: contain;
+    }
+
+    .header-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--black);
+      color: var(--white);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .header-pill::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(156, 171, 61, 0.22);
+    }
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .page {
+      min-height: calc(100vh - 92px);
+      display: flex;
+      align-items: center;
+      padding: 64px 0;
+    }
+
+    .hero-card {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.90);
+      border: 1px solid var(--line);
+      border-radius: 36px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      right: -58px;
+      top: -58px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--green),
+        var(--green) 7px,
+        transparent 7px,
+        transparent 14px
+      );
+      opacity: 0.46;
+      border-radius: 38px;
+      transform: rotate(8deg);
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      left: -50px;
+      bottom: -50px;
+      background: var(--blue);
+      opacity: 0.16;
+      border-radius: 999px;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 36px;
+      align-items: center;
+      padding: 46px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--black);
+      color: var(--white);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--yellow);
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.02;
+      letter-spacing: -2.4px;
+      margin: 0 0 18px;
+      color: var(--black);
+    }
+
+    h1 span {
+      color: var(--orange);
+    }
+
+    .lead {
+      font-size: 19px;
+      line-height: 1.62;
+      color: var(--muted);
+      margin: 0 0 28px;
+      max-width: 580px;
+    }
+
+    .mini-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .mini-info span {
+      background: var(--offwhite);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--graphite);
+    }
+
+    /* =====================================================
+       CARDS DE LINKS
+    ===================================================== */
+
+    .links-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .lp-card {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 18px;
+      align-items: center;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: var(--shadow-soft);
+      transition: 0.22s ease;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .lp-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.11);
+    }
+
+    .lp-card::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      bottom: -42px;
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
+      opacity: 0.16;
+      transform: rotate(12deg);
+    }
+
+    .lp-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--black);
+      flex-shrink: 0;
+    }
+
+    .lp-content h2 {
+      margin: 0 0 7px;
+      font-size: 21px;
+      letter-spacing: -0.4px;
+      color: var(--black);
+    }
+
+    .lp-content p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    .lp-action {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 22px;
+      font-weight: 900;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Tapete — laranja */
+    .lp-card.tapete {
+      border-left: 7px solid var(--orange);
+    }
+
+    .lp-card.tapete::after {
+      background: var(--orange);
+    }
+
+    .lp-card.tapete .lp-icon {
+      background: var(--orange-soft);
+      color: var(--orange);
+    }
+
+    .lp-card.tapete .lp-action {
+      background: linear-gradient(135deg, var(--orange), var(--yellow));
+      color: var(--black);
+    }
+
+    /* Piso — azul */
+    .lp-card.piso {
+      border-left: 7px solid var(--blue);
+    }
+
+    .lp-card.piso::after {
+      background: var(--blue);
+    }
+
+    .lp-card.piso .lp-icon {
+      background: var(--blue-soft);
+      color: var(--blue-dark);
+    }
+
+    .lp-card.piso .lp-action {
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    }
+
+    /* Grama — verde */
+    .lp-card.grama {
+      border-left: 7px solid var(--green);
+    }
+
+    .lp-card.grama::after {
+      background: var(--green);
+    }
+
+    .lp-card.grama .lp-icon {
+      background: var(--green-soft);
+      color: var(--green-dark);
+    }
+
+    .lp-card.grama .lp-action {
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      color: var(--black);
+    }
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 0 0 28px;
+    }
+
+    /* =====================================================
+       RESPONSIVO
+    ===================================================== */
+
+    @media (max-width: 900px) {
+      .page {
+        align-items: flex-start;
+        padding: 40px 0;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 34px;
+      }
+
+      .lead {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-content {
+        min-height: 78px;
+      }
+
+      .logo img {
+        height: 54px;
+        max-width: 190px;
+      }
+
+      .header-pill {
+        display: none;
+      }
+
+      .hero-inner {
+        padding: 26px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .lp-card {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .lp-action {
+        width: 100%;
+        height: 46px;
+      }
+
+      .lp-action::before {
+        content: "Acessar página";
+        font-size: 14px;
+        margin-right: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="/" class="logo" aria-label="SmartFloor One">
+        <img src="assets/logo.png" alt="SmartFloor One" />
+      </a>
+
+      <div class="header-pill">
+        Landing pages de campanhas
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="page">
+    <div class="container">
+      <section class="hero-card">
+        <div class="hero-inner">
+          <div>
+            <span class="hero-badge">
+              SmartFloor One
+            </span>
+
+            <h1>
+              Soluções para ambientes mais bonitos, seguros e funcionais.
+            </h1>
+
+            <p class="lead">
+              Escolha abaixo a página ideal para conhecer as soluções da SmartFloor One 
+              e solicitar um orçamento direto pelo WhatsApp.
+            </p>
+
+            <div class="mini-info">
+              <span>Tapetes personalizados</span>
+              <span>Pisos laminados PVC</span>
+              <span>Grama sintética</span>
+            </div>
+          </div>
+
+          <div class="links-grid">
+            <a href="/tapete-personalizado/" class="lp-card tapete">
+              <div class="lp-icon">▧</div>
+
+              <div class="lp-content">
+                <h2>Tapete Personalizado</h2>
+                <p>
+                  Sua marca começa a impactar desde o primeiro passo, com tapetes sob medida.
+                </p>
+              </div>
+
+              <div class="lp-action">›</div>
+            </a>
+
+            <a href="/piso-laminado-pvc/" class="lp-card piso">
+              <div class="lp-icon">▦</div>
+
+              <div class="lp-content">
+                <h2>Piso Laminado em PVC</h2>
+                <p>
+                  Segurança, resistência e performance para ambientes exigentes e de alto tráfego.
+                </p>
+              </div>
+
+              <div class="lp-action">›</div>
+            </a>
+
+            <a href="/grama-sintetica/" class="lp-card grama">
+              <div class="lp-icon">▩</div>
+
+              <div class="lp-content">
+                <h2>Grama Sintética</h2>
+                <p>
+                  Estética impecável, visual sempre verde e máxima praticidade para seu ambiente.
+                </p>
+              </div>
+
+              <div class="lp-action">›</div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      SmartFloor One • Soluções em tapetes, pisos e revestimentos
+    </div>
+  </footer>
+</body>
+</html>
