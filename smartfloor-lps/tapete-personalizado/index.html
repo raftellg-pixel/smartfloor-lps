@@ -27,35 +27,48 @@
   <!-- End Google Tag Manager -->
 
   <style>
-    /* ===============================
-       VARIÁVEIS GERAIS
-    =============================== */
+    /* =====================================================
+       SMARTFLOOR ONE — PALETA DA MARCA
+    ===================================================== */
 
     :root {
-      --brand: #0f766e;
-      --brand-dark: #0b4f4a;
-      --brand-light: #14b8a6;
-      --accent: #f59e0b;
+      --black: #050505;
+      --graphite: #151515;
+      --dark: #101815;
 
-      --text: #12201f;
-      --muted: #5f6f6c;
+      --green: #9cab3d;
+      --green-dark: #6f7d24;
+      --green-soft: #eef3d8;
 
-      --soft: #eef8f6;
-      --soft-2: #f8fbfa;
-      --line: #dce9e7;
+      --orange: #d9511e;
+      --orange-dark: #b63f14;
+      --orange-soft: #fff0e8;
+
+      --yellow: #f2a51f;
+      --yellow-soft: #fff6df;
+
+      --blue: #139bd7;
+      --blue-dark: #0878aa;
+      --blue-soft: #e8f6fc;
+
+      --text: #151515;
+      --muted: #5c6662;
+      --line: #e2e5df;
       --white: #ffffff;
+      --offwhite: #fbfbf7;
 
-      --shadow: 0 20px 50px rgba(15, 118, 110, 0.16);
-      --shadow-soft: 0 12px 30px rgba(18, 32, 31, 0.06);
-
-      --radius: 26px;
+      --radius: 28px;
       --radius-sm: 18px;
+
+      --shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
+      --shadow-soft: 0 14px 34px rgba(0, 0, 0, 0.07);
+
       --container: 1120px;
     }
 
-    /* ===============================
-       RESET E BASE
-    =============================== */
+    /* =====================================================
+       RESET
+    ===================================================== */
 
     * {
       box-sizing: border-box;
@@ -69,7 +82,7 @@
       margin: 0;
       font-family: Inter, Arial, Helvetica, sans-serif;
       color: var(--text);
-      background: var(--white);
+      background: var(--offwhite);
     }
 
     a {
@@ -87,22 +100,22 @@
       margin: 0 auto;
     }
 
-    /* ===============================
+    /* =====================================================
        HEADER
-    =============================== */
+    ===================================================== */
 
     .site-header {
       width: 100%;
       background: rgba(255, 255, 255, 0.96);
       border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       position: sticky;
       top: 0;
       z-index: 999;
     }
 
     .header-content {
-      min-height: 88px;
+      min-height: 92px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -117,9 +130,9 @@
     }
 
     .logo img {
-      height: 66px;
+      height: 70px;
       width: auto;
-      max-width: 240px;
+      max-width: 270px;
       object-fit: contain;
     }
 
@@ -127,32 +140,32 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: var(--brand);
+      background: var(--black);
       color: var(--white);
-      padding: 14px 24px;
+      padding: 15px 25px;
       border-radius: 999px;
       font-size: 15px;
       font-weight: 900;
       white-space: nowrap;
-      box-shadow: 0 10px 24px rgba(15, 118, 110, 0.22);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
       transition: 0.2s ease;
     }
 
     .header-btn:hover {
-      background: var(--brand-dark);
+      background: var(--orange);
       transform: translateY(-1px);
     }
 
-    /* ===============================
+    /* =====================================================
        BOTÕES
-    =============================== */
+    ===================================================== */
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 17px 22px;
+      padding: 17px 24px;
       border-radius: 999px;
       border: 0;
       cursor: pointer;
@@ -161,28 +174,36 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--brand), var(--brand-light));
-      color: var(--white);
-      box-shadow: 0 14px 28px rgba(20, 184, 166, 0.25);
+      background: linear-gradient(135deg, var(--orange), var(--yellow));
+      color: var(--black);
+      box-shadow: 0 14px 30px rgba(217, 81, 30, 0.28);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(217, 81, 30, 0.35);
     }
 
     .btn-secondary {
       background: var(--white);
-      color: var(--brand-dark);
+      color: var(--black);
       border: 1px solid var(--line);
     }
 
-    /* ===============================
+    .btn-secondary:hover {
+      border-color: var(--green);
+      color: var(--green-dark);
+    }
+
+    /* =====================================================
        HERO
-    =============================== */
+    ===================================================== */
 
     .hero {
-      padding: 70px 0 52px;
-      background: linear-gradient(135deg, #f5fbfa 0%, #ffffff 48%, #e8f7f4 100%);
+      padding: 74px 0 56px;
+      background:
+        radial-gradient(circle at top right, rgba(19, 155, 215, 0.13), transparent 34%),
+        linear-gradient(135deg, #ffffff 0%, #fbfbf7 45%, #eef3d8 100%);
     }
 
     .hero-grid {
@@ -196,10 +217,9 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--white);
-      border: 1px solid var(--line);
-      color: var(--brand-dark);
-      padding: 9px 14px;
+      background: var(--black);
+      color: var(--white);
+      padding: 10px 16px;
       border-radius: 999px;
       font-size: 13px;
       font-weight: 900;
@@ -207,22 +227,31 @@
       letter-spacing: 0.6px;
     }
 
+    .eyebrow::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--yellow);
+    }
+
     .hero h1 {
-      font-size: clamp(36px, 5vw, 62px);
+      font-size: clamp(38px, 5vw, 64px);
       line-height: 1.02;
-      margin: 20px 0 18px;
-      letter-spacing: -2.2px;
+      margin: 22px 0 18px;
+      letter-spacing: -2.4px;
+      color: var(--black);
     }
 
     .hero h1 strong {
-      color: var(--brand);
+      color: var(--orange);
     }
 
     .lead {
       font-size: 20px;
-      line-height: 1.55;
+      line-height: 1.58;
       color: var(--muted);
-      margin: 0 0 26px;
+      margin: 0 0 28px;
     }
 
     .cta-row {
@@ -236,35 +265,68 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 24px;
+      margin-top: 26px;
     }
 
     .pill {
       background: var(--white);
       border: 1px solid var(--line);
       border-radius: 999px;
-      padding: 10px 13px;
-      color: var(--muted);
+      padding: 10px 14px;
+      color: var(--graphite);
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .pill:nth-child(1) {
+      border-color: rgba(217, 81, 30, 0.28);
+    }
+
+    .pill:nth-child(2) {
+      border-color: rgba(156, 171, 61, 0.38);
+    }
+
+    .pill:nth-child(3) {
+      border-color: rgba(19, 155, 215, 0.30);
     }
 
     .hero-card {
-      background: var(--white);
-      border: 1px solid var(--line);
+      background: var(--black);
       border-radius: var(--radius);
       padding: 18px;
       box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      right: -40px;
+      top: -40px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--green),
+        var(--green) 6px,
+        transparent 6px,
+        transparent 12px
+      );
+      opacity: 0.65;
+      border-radius: 24px;
     }
 
     .hero-img {
       height: 430px;
-      border-radius: 20px;
+      border-radius: 22px;
       background:
-        linear-gradient(135deg, rgba(15, 118, 110, 0.18), rgba(245, 158, 11, 0.12)),
+        linear-gradient(135deg, rgba(0, 0, 0, 0.18), rgba(217, 81, 30, 0.12)),
         url("../assets/tapete-hero.jpg") center / cover no-repeat;
       position: relative;
       overflow: hidden;
+      z-index: 1;
     }
 
     .hero-img::after {
@@ -272,52 +334,64 @@
       position: absolute;
       left: 18px;
       bottom: 18px;
-      background: rgba(255, 255, 255, 0.92);
-      color: var(--brand-dark);
-      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--black);
+      padding: 11px 15px;
       border-radius: 14px;
       font-size: 13px;
       font-weight: 900;
+      border-left: 5px solid var(--orange);
     }
 
-    /* ===============================
+    /* =====================================================
        SEÇÕES
-    =============================== */
+    ===================================================== */
 
     .section {
-      padding: 68px 0;
+      padding: 70px 0;
+      background: var(--offwhite);
     }
 
-    .section-light {
-      background: var(--soft-2);
+    .section-white {
+      background: var(--white);
+    }
+
+    .section-dark {
+      background: var(--black);
+      color: var(--white);
     }
 
     .section-soft {
-      background: var(--soft);
+      background: linear-gradient(135deg, var(--green-soft), #ffffff);
     }
 
     .section-title {
-      max-width: 760px;
-      margin-bottom: 34px;
+      max-width: 770px;
+      margin-bottom: 36px;
     }
 
     .section-title h2 {
-      font-size: clamp(28px, 4vw, 44px);
+      font-size: clamp(30px, 4vw, 46px);
       line-height: 1.1;
       margin: 0 0 12px;
-      letter-spacing: -1.2px;
+      letter-spacing: -1.4px;
+      color: inherit;
     }
 
     .section-title p {
       font-size: 18px;
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.65;
       margin: 0;
     }
 
-    /* ===============================
-       CARDS DE BENEFÍCIOS
-    =============================== */
+    .section-dark .section-title p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    /* =====================================================
+       BENEFÍCIOS
+    ===================================================== */
 
     .cards {
       display: grid;
@@ -328,17 +402,22 @@
     .card {
       background: var(--white);
       border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 22px;
+      border-radius: 24px;
+      padding: 24px;
       box-shadow: var(--shadow-soft);
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
     }
 
     .icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      background: var(--soft);
-      color: var(--brand);
+      width: 44px;
+      height: 44px;
+      border-radius: 15px;
+      background: var(--black);
+      color: var(--yellow);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -346,9 +425,25 @@
       margin-bottom: 16px;
     }
 
+    .card:nth-child(2) .icon {
+      background: var(--green);
+      color: var(--black);
+    }
+
+    .card:nth-child(3) .icon {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .card:nth-child(4) .icon {
+      background: var(--orange);
+      color: var(--white);
+    }
+
     .card h3 {
       margin: 0 0 10px;
       font-size: 18px;
+      color: var(--black);
     }
 
     .card p {
@@ -357,31 +452,40 @@
       line-height: 1.55;
     }
 
-    /* ===============================
-       BLOCOS DIVIDIDOS
-    =============================== */
+    /* =====================================================
+       SPLIT / BOXES
+    ===================================================== */
 
     .split {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 30px;
+      gap: 32px;
       align-items: center;
     }
 
     .box {
-      background: var(--soft);
+      background: var(--white);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 32px;
+      padding: 34px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .box-highlight {
+      background:
+        linear-gradient(135deg, rgba(156, 171, 61, 0.20), rgba(255, 255, 255, 1)),
+        var(--white);
+      border-left: 7px solid var(--green);
     }
 
     .box h2 {
       margin-top: 0;
+      color: var(--black);
     }
 
     .box p {
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .list {
@@ -397,15 +501,15 @@
       align-items: flex-start;
       gap: 12px;
       color: var(--muted);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     .check {
-      flex: 0 0 24px;
-      width: 24px;
-      height: 24px;
+      flex: 0 0 25px;
+      width: 25px;
+      height: 25px;
       border-radius: 50%;
-      background: var(--brand);
+      background: var(--orange);
       color: var(--white);
       display: flex;
       align-items: center;
@@ -414,73 +518,77 @@
       font-weight: 900;
     }
 
-    /* ===============================
+    /* =====================================================
        GALERIA
-    =============================== */
+    ===================================================== */
 
     .gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      gap: 16px;
     }
 
     .gallery-item {
-      height: 230px;
-      border-radius: 20px;
+      height: 240px;
+      border-radius: 24px;
       border: 1px solid var(--line);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.35));
     }
 
     .gallery-item-1 {
-      background-image:
-        linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(18, 32, 31, 0.12)),
-        url("../assets/tapete-01.jpg");
+      background-image: url("../assets/tapete-01.jpg");
     }
 
     .gallery-item-2 {
-      background-image:
-        linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(18, 32, 31, 0.12)),
-        url("../assets/tapete-02.jpg");
+      background-image: url("../assets/tapete-02.jpg");
     }
 
     .gallery-item-3 {
-      background-image:
-        linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(18, 32, 31, 0.12)),
-        url("../assets/tapete-03.jpg");
+      background-image: url("../assets/tapete-03.jpg");
     }
 
-    /* ===============================
+    /* =====================================================
        PASSOS
-    =============================== */
+    ===================================================== */
 
     .steps {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
+      gap: 13px;
     }
 
     .step {
       background: var(--white);
       border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 20px;
+      border-radius: 22px;
+      padding: 22px;
       color: var(--muted);
       line-height: 1.45;
+      box-shadow: var(--shadow-soft);
     }
 
     .step strong {
       display: block;
-      color: var(--brand);
-      font-size: 24px;
+      color: var(--orange);
+      font-size: 28px;
       margin-bottom: 8px;
     }
 
-    /* ===============================
+    /* =====================================================
        FAQ
-    =============================== */
+    ===================================================== */
 
     .faq {
       display: grid;
@@ -492,11 +600,13 @@
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 18px;
+      box-shadow: var(--shadow-soft);
     }
 
     .faq summary {
       font-weight: 900;
       cursor: pointer;
+      color: var(--black);
     }
 
     .faq p {
@@ -504,39 +614,67 @@
       line-height: 1.6;
     }
 
-    /* ===============================
+    /* =====================================================
        CTA FINAL
-    =============================== */
+    ===================================================== */
 
     .final {
-      background: linear-gradient(135deg, var(--brand-dark), var(--brand));
+      background:
+        radial-gradient(circle at top left, rgba(19, 155, 215, 0.20), transparent 30%),
+        linear-gradient(135deg, var(--black), var(--graphite));
       color: var(--white);
-      padding: 62px 0;
+      padding: 68px 0;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      bottom: -60px;
+      width: 220px;
+      height: 220px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--green),
+        var(--green) 7px,
+        transparent 7px,
+        transparent 14px
+      );
+      opacity: 0.35;
+      border-radius: 36px;
+      transform: rotate(12deg);
+    }
+
+    .final .container {
+      position: relative;
+      z-index: 1;
     }
 
     .final h2 {
-      font-size: clamp(30px, 4vw, 48px);
-      margin: 0 0 12px;
-      letter-spacing: -1.2px;
+      font-size: clamp(32px, 4vw, 50px);
+      margin: 0 0 14px;
+      letter-spacing: -1.4px;
     }
 
     .final p {
       max-width: 720px;
-      margin: 0 auto 24px;
-      color: rgba(255, 255, 255, 0.84);
+      margin: 0 auto 26px;
+      color: rgba(255, 255, 255, 0.78);
       font-size: 18px;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .final .btn {
-      background: var(--white);
-      color: var(--brand-dark);
+      background: linear-gradient(135deg, var(--yellow), var(--orange));
+      color: var(--black);
     }
 
-    /* ===============================
+    /* =====================================================
        WHATSAPP FLUTUANTE
-    =============================== */
+    ===================================================== */
 
     .float-whats {
       position: fixed;
@@ -551,20 +689,21 @@
       box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35);
     }
 
-    /* ===============================
+    /* =====================================================
        FOOTER
-    =============================== */
+    ===================================================== */
 
     .footer {
-      padding: 22px 0;
+      padding: 24px 0;
       text-align: center;
       color: var(--muted);
       font-size: 14px;
+      background: var(--white);
     }
 
-    /* ===============================
+    /* =====================================================
        RESPONSIVO
-    =============================== */
+    ===================================================== */
 
     @media (max-width: 900px) {
       .hero-grid,
@@ -585,19 +724,19 @@
       }
 
       .hero-img {
-        height: 340px;
+        height: 350px;
       }
     }
 
     @media (max-width: 768px) {
       .header-content {
-        min-height: 76px;
+        min-height: 78px;
         gap: 12px;
       }
 
       .logo img {
-        height: 52px;
-        max-width: 170px;
+        height: 54px;
+        max-width: 190px;
       }
 
       .header-btn {
@@ -612,7 +751,7 @@
       }
 
       .hero {
-        padding: 42px 0;
+        padding: 44px 0;
       }
 
       .hero h1 {
@@ -642,7 +781,7 @@
       }
 
       .section {
-        padding: 48px 0;
+        padding: 50px 0;
       }
 
       .float-whats {
@@ -731,7 +870,7 @@
     </section>
 
     <!-- Benefícios -->
-    <section class="section" id="beneficios">
+    <section class="section section-white" id="beneficios">
       <div class="container">
         <div class="section-title">
           <h2>
@@ -773,9 +912,9 @@
     </section>
 
     <!-- Modelos -->
-    <section class="section section-light">
+    <section class="section">
       <div class="container split">
-        <div class="box">
+        <div class="box box-highlight">
           <h2>Modelos disponíveis</h2>
 
           <ul class="list">
@@ -816,7 +955,7 @@
     </section>
 
     <!-- Galeria -->
-    <section class="section">
+    <section class="section section-white">
       <div class="container">
         <div class="section-title">
           <h2>Usado em diversos ambientes</h2>
@@ -871,7 +1010,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="section">
+    <section class="section section-white">
       <div class="container split">
         <div>
           <div class="section-title">
