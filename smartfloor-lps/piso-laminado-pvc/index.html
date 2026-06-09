@@ -11,7 +11,6 @@
     content="Piso vinílico residencial e comercial para reformas, casas, apartamentos, lojas, clínicas e escritórios. Solicite orçamento com a SmartFloor One."
   />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="../assets/favicon.png" />
   <link rel="apple-touch-icon" href="../assets/favicon.png" />
 
@@ -563,41 +562,58 @@
       box-shadow: 0 8px 18px rgba(6, 44, 61, 0.14);
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+    .carousel-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 8px 0 14px;
     }
 
-    .gallery-item {
-      height: 240px;
+    .carousel-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: scrollGallery 42s linear infinite;
+    }
+
+    .carousel-wrap:hover .carousel-track {
+      animation-play-state: paused;
+    }
+
+    .carousel-item {
+      width: 310px;
+      height: 220px;
+      flex: 0 0 auto;
       border-radius: 24px;
-      border: 1px solid var(--line);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
       overflow: hidden;
       box-shadow: var(--shadow-soft);
+      border: 1px solid var(--line);
+      background: var(--blue-soft);
       position: relative;
     }
 
-    .gallery-item::after {
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .carousel-item::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.35));
+      background: linear-gradient(180deg, transparent 58%, rgba(0, 0, 0, 0.34));
+      pointer-events: none;
     }
 
-    .gallery-item-1 {
-      background-image: url("../assets/piso-01.jpg");
-    }
+    @keyframes scrollGallery {
+      from {
+        transform: translateX(0);
+      }
 
-    .gallery-item-2 {
-      background-image: url("../assets/piso-02.jpg");
-    }
-
-    .gallery-item-3 {
-      background-image: url("../assets/piso-03.jpg");
+      to {
+        transform: translateX(-50%);
+      }
     }
 
     .steps {
@@ -742,10 +758,6 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
       .hero-img {
         height: 350px;
       }
@@ -774,6 +786,11 @@
       .type-images img {
         height: 240px;
       }
+
+      .carousel-item {
+        width: 260px;
+        height: 190px;
+      }
     }
 
     @media (max-width: 560px) {
@@ -794,8 +811,7 @@
       }
 
       .cards,
-      .steps,
-      .gallery {
+      .steps {
         grid-template-columns: 1fr;
       }
 
@@ -813,6 +829,11 @@
 
       .section {
         padding: 50px 0;
+      }
+
+      .carousel-item {
+        width: 230px;
+        height: 175px;
       }
 
       .float-whats {
@@ -836,7 +857,6 @@
   </noscript>
   <!-- End Google Tag Manager noscript -->
 
-  <!-- Header limpo -->
   <header class="site-header">
     <div class="container header-content">
       <a href="/" class="logo" aria-label="SmartFloor One">
@@ -854,7 +874,6 @@
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
@@ -900,7 +919,6 @@
       </div>
     </section>
 
-    <!-- Benefícios -->
     <section class="section section-white" id="beneficios">
       <div class="container">
         <div class="section-title">
@@ -942,7 +960,6 @@
       </div>
     </section>
 
-    <!-- O que é / do que é feito -->
     <section class="section">
       <div class="container split">
         <div class="box box-highlight">
@@ -993,7 +1010,6 @@
       </div>
     </section>
 
-    <!-- Tipos de piso vinílico -->
     <section class="section section-white" id="tipos">
       <div class="container">
         <div class="section-title center">
@@ -1005,7 +1021,6 @@
         </div>
 
         <div class="type-grid">
-          <!-- Linha residencial -->
           <article class="type-card">
             <div class="type-copy">
               <span class="type-badge">Linha residencial</span>
@@ -1042,7 +1057,6 @@
             </div>
           </article>
 
-          <!-- Linha comercial -->
           <article class="type-card">
             <div class="type-copy">
               <span class="type-badge">Linha comercial</span>
@@ -1079,7 +1093,6 @@
             </div>
           </article>
 
-          <!-- Manta -->
           <article class="type-card">
             <div class="type-copy">
               <span class="type-badge">Piso em manta</span>
@@ -1116,7 +1129,6 @@
             </div>
           </article>
 
-          <!-- Praticlick -->
           <article class="type-card">
             <div class="type-copy">
               <span class="type-badge">Sistema click</span>
@@ -1156,27 +1168,95 @@
       </div>
     </section>
 
-    <!-- Galeria -->
     <section class="section section-white">
       <div class="container">
         <div class="section-title">
-          <h2>Aplicações para ambientes internos</h2>
+          <h2>Aplicações de pisos vinílicos</h2>
 
           <p>
-            Casas, apartamentos, lojas, clínicas, escritórios e ambientes comerciais
-            que precisam de beleza, conforto e praticidade.
+            Soluções para casas, apartamentos, lojas, clínicas, escritórios e ambientes comerciais
+            que precisam de beleza, conforto, praticidade e acabamento moderno.
           </p>
         </div>
 
-        <div class="gallery">
-          <div class="gallery-item gallery-item-1"></div>
-          <div class="gallery-item gallery-item-2"></div>
-          <div class="gallery-item gallery-item-3"></div>
+        <div class="carousel-wrap">
+          <div class="carousel-track">
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-01.jpg" alt="Piso vinílico aplicado em sala residencial" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-02.jpg" alt="Piso vinílico em ambiente interno moderno" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-03.jpg" alt="Piso vinílico em ambiente comercial" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-04.jpg" alt="Piso vinílico com acabamento amadeirado" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-05.jpg" alt="Piso vinílico em apartamento" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-06.jpg" alt="Piso vinílico em escritório" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-07.jpg" alt="Piso vinílico em loja" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-08.jpg" alt="Piso vinílico em clínica" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-09.jpg" alt="Piso vinílico em quarto" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-10.jpg" alt="Piso vinílico em sala de estar" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-11.jpg" alt="Piso vinílico para ambiente corporativo" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-12.jpg" alt="Piso vinílico para reforma" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-01.jpg" alt="Piso vinílico aplicado em sala residencial" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-02.jpg" alt="Piso vinílico em ambiente interno moderno" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-03.jpg" alt="Piso vinílico em ambiente comercial" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-04.jpg" alt="Piso vinílico com acabamento amadeirado" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-05.jpg" alt="Piso vinílico em apartamento" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../assets/piso-vinilico-06.jpg" alt="Piso vinílico em escritório" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Passos -->
     <section class="section section-blue">
       <div class="container">
         <div class="section-title">
@@ -1217,7 +1297,6 @@
       </div>
     </section>
 
-    <!-- FAQ -->
     <section class="section section-white">
       <div class="container split">
         <div>
@@ -1271,7 +1350,6 @@
       </div>
     </section>
 
-    <!-- CTA Final -->
     <section class="final">
       <div class="container">
         <h2>Renove seu ambiente com piso vinílico.</h2>
@@ -1292,7 +1370,6 @@
     </section>
   </main>
 
-  <!-- WhatsApp Flutuante -->
   <a
     class="float-whats"
     href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20piso%20vin%C3%ADlico."
@@ -1301,7 +1378,6 @@
     WhatsApp
   </a>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div>SmartFloor One • Soluções em tapetes, pisos e revestimentos</div>
