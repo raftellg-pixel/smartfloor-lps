@@ -1,28 +1,14 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Pisos Vinílicos e Laminados PVC | SmartFloor One</title>
-
-  <meta 
-    name="description" 
-    content="Pisos laminados em PVC para academias, indústrias, cozinhas, áreas comerciais e ambientes de alto tráfego. Solicite orçamento com a SmartFloor One." 
-  />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../assets/favicon.png" />
-  <link rel="apple-touch-icon" href="../assets/favicon.png" />
-
   <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){
       w[l]=w[l]||[];
-      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
       var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),
-      dl=l!='dataLayer'?'&l='+l:'';
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
       j.async=true;
       j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
       f.parentNode.insertBefore(j,f);
@@ -30,65 +16,47 @@
   </script>
   <!-- End Google Tag Manager -->
 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Piso Vinílico em Anápolis | SmartFloor One</title>
+  <meta name="description" content="Piso vinílico residencial e comercial em Anápolis. Soluções práticas, modernas e resistentes para casas, apartamentos, lojas, clínicas e escritórios. Solicite orçamento pelo WhatsApp." />
+
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+
   <style>
-    /* =====================================================
-       SMARTFLOOR ONE — LP PISOS VINÍLICOS
-       Paleta com predominância do azul da marca
-    ===================================================== */
-
     :root {
-      --black: #050505;
-      --graphite: #151515;
-      --dark-blue: #062c3d;
-
-      --blue: #139bd7;
-      --blue-dark: #0878aa;
-      --blue-soft: #e8f6fc;
-
-      --green: #9cab3d;
-      --green-dark: #6f7d24;
-      --green-soft: #eef3d8;
-
+      --primary: #0f172a;
+      --secondary: #1e3a8a;
+      --accent: #2563eb;
+      --accent-light: #dbeafe;
       --orange: #d9511e;
-      --yellow: #f2a51f;
-
-      --text: #151515;
-      --muted: #5d686b;
-      --line: #e1e8ea;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --bg: #f8fafc;
       --white: #ffffff;
-      --offwhite: #f8fbfc;
-
-      --radius: 28px;
-      --radius-sm: 18px;
-
-      --shadow: 0 22px 55px rgba(8, 120, 170, 0.18);
-      --shadow-soft: 0 14px 34px rgba(0, 0, 0, 0.07);
-
-      --container: 1120px;
+      --border: #e5e7eb;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+      --radius: 22px;
     }
-
-    /* =====================================================
-       RESET
-    ===================================================== */
 
     * {
       box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
       color: var(--text);
-      background: var(--offwhite);
+      line-height: 1.6;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
     img {
@@ -97,1015 +65,902 @@
     }
 
     .container {
-      width: min(var(--container), 92%);
+      width: min(1120px, 92%);
       margin: 0 auto;
     }
 
-    /* =====================================================
-       HEADER
-    ===================================================== */
-
-    .site-header {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.96);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(12px);
-      position: sticky;
-      top: 0;
-      z-index: 999;
+    .topbar {
+      background: var(--primary);
+      color: var(--white);
+      font-size: 14px;
+      padding: 10px 0;
     }
 
-    .header-content {
-      min-height: 92px;
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .header-inner {
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-      padding: 12px 0;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      flex-shrink: 0;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.03em;
     }
 
     .logo img {
-      height: 70px;
+      height: 42px;
       width: auto;
-      max-width: 270px;
-      object-fit: contain;
     }
 
-    .header-btn {
-      display: inline-flex;
+    .nav {
+      display: flex;
       align-items: center;
-      justify-content: center;
-      background: var(--blue);
-      color: var(--white);
-      padding: 15px 25px;
-      border-radius: 999px;
+      gap: 22px;
       font-size: 15px;
-      font-weight: 900;
-      white-space: nowrap;
-      box-shadow: 0 10px 24px rgba(19, 155, 215, 0.25);
-      transition: 0.2s ease;
+      color: var(--muted);
+      font-weight: 600;
     }
 
-    .header-btn:hover {
-      background: var(--blue-dark);
-      transform: translateY(-1px);
+    .nav a:hover {
+      color: var(--accent);
     }
-
-    /* =====================================================
-       BOTÕES
-    ===================================================== */
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 17px 24px;
+      padding: 14px 22px;
       border-radius: 999px;
-      border: 0;
-      cursor: pointer;
-      font-weight: 900;
+      font-weight: 800;
       transition: 0.2s ease;
+      cursor: pointer;
+      border: none;
+      gap: 8px;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      background: var(--accent);
       color: var(--white);
-      box-shadow: 0 14px 30px rgba(19, 155, 215, 0.32);
+      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.28);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 18px 36px rgba(19, 155, 215, 0.38);
+      background: #1d4ed8;
     }
 
-    .btn-secondary {
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--primary);
       background: var(--white);
-      color: var(--black);
-      border: 1px solid var(--line);
     }
 
-    .btn-secondary:hover {
-      border-color: var(--blue);
-      color: var(--blue-dark);
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
     }
-
-    /* =====================================================
-       HERO
-    ===================================================== */
 
     .hero {
-      padding: 74px 0 56px;
+      padding: 70px 0 50px;
       background:
-        radial-gradient(circle at top right, rgba(19, 155, 215, 0.20), transparent 34%),
-        linear-gradient(135deg, #ffffff 0%, #f7fcfe 46%, #e8f6fc 100%);
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.16), transparent 38%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
-      gap: 42px;
+      gap: 46px;
       align-items: center;
     }
 
     .eyebrow {
       display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--dark-blue);
-      color: var(--white);
-      padding: 10px 16px;
+      padding: 8px 14px;
       border-radius: 999px;
+      background: var(--accent-light);
+      color: var(--secondary);
       font-size: 13px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--blue);
-      box-shadow: 0 0 0 4px rgba(19, 155, 215, 0.18);
-    }
-
-    .hero h1 {
-      font-size: clamp(38px, 5vw, 64px);
-      line-height: 1.02;
-      margin: 22px 0 18px;
-      letter-spacing: -2.4px;
-      color: var(--black);
-    }
-
-    .hero h1 strong {
-      color: var(--blue-dark);
-    }
-
-    .lead {
-      font-size: 20px;
-      line-height: 1.58;
-      color: var(--muted);
-      margin: 0 0 28px;
-    }
-
-    .cta-row {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .trust {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
-    }
-
-    .pill {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 10px 14px;
-      color: var(--graphite);
-      font-size: 14px;
       font-weight: 800;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
-    .pill:nth-child(1) {
-      border-color: rgba(19, 155, 215, 0.35);
+    h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.05;
+      color: var(--primary);
+      letter-spacing: -0.05em;
+      margin-bottom: 22px;
     }
 
-    .pill:nth-child(2) {
-      border-color: rgba(156, 171, 61, 0.38);
+    .hero p {
+      font-size: 19px;
+      color: var(--muted);
+      margin-bottom: 28px;
+      max-width: 620px;
     }
 
-    .pill:nth-child(3) {
-      border-color: rgba(217, 81, 30, 0.28);
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .hero-list {
+      display: grid;
+      gap: 10px;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .hero-list span::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 900;
+      margin-right: 8px;
     }
 
     .hero-card {
-      background: var(--dark-blue);
+      position: relative;
       border-radius: var(--radius);
-      padding: 18px;
+      overflow: hidden;
+      min-height: 460px;
       box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(15, 23, 42, 0.05), rgba(15, 23, 42, 0.2)),
+        url("https://d335luupugsy2.cloudfront.net/cms/files/51845/1736774870/%241qyd9uqpuha") center/cover no-repeat;
     }
 
-    .hero-card::before {
-      content: "";
+    .hero-card-badge {
       position: absolute;
-      width: 155px;
-      height: 155px;
-      right: -42px;
-      top: -42px;
-      background: repeating-linear-gradient(
-        -45deg,
-        var(--blue),
-        var(--blue) 6px,
-        transparent 6px,
-        transparent 12px
-      );
-      opacity: 0.45;
-      border-radius: 26px;
+      left: 22px;
+      bottom: 22px;
+      right: 22px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
     }
 
-    .hero-img {
-      height: 430px;
-      border-radius: 22px;
-      background-image:
-        linear-gradient(135deg, rgba(0, 0, 0, 0.14), rgba(19, 155, 215, 0.16)),
-        url("../assets/piso-hero.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
+    .hero-card-badge strong {
+      display: block;
+      color: var(--primary);
+      font-size: 20px;
+      margin-bottom: 4px;
     }
 
-    .hero-img::after {
-      content: "Piso laminado PVC de alta performance";
-      position: absolute;
-      left: 18px;
-      bottom: 18px;
-      background: rgba(255, 255, 255, 0.94);
-      color: var(--black);
-      padding: 11px 15px;
-      border-radius: 14px;
-      font-size: 13px;
-      font-weight: 900;
-      border-left: 5px solid var(--blue);
-    }
-
-    /* =====================================================
-       SEÇÕES
-    ===================================================== */
-
-    .section {
-      padding: 70px 0;
-      background: var(--offwhite);
-    }
-
-    .section-white {
-      background: var(--white);
-    }
-
-    .section-blue {
-      background: linear-gradient(135deg, var(--blue-soft), #ffffff);
-    }
-
-    .section-title {
-      max-width: 790px;
-      margin-bottom: 36px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(30px, 4vw, 46px);
-      line-height: 1.1;
-      margin: 0 0 12px;
-      letter-spacing: -1.4px;
-      color: inherit;
-    }
-
-    .section-title p {
-      font-size: 18px;
+    .hero-card-badge small {
       color: var(--muted);
-      line-height: 1.65;
-      margin: 0;
+      font-weight: 600;
     }
 
-    /* =====================================================
-       BENEFÍCIOS
-    ===================================================== */
+    section {
+      padding: 70px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 42px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      color: var(--primary);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      margin-bottom: 14px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 18px;
+    }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
 
     .card {
       background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: var(--shadow-soft);
-      transition: 0.2s ease;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
     }
 
-    .card:hover {
-      transform: translateY(-3px);
-    }
-
-    .icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 15px;
-      background: var(--blue);
-      color: var(--white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .card-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 22px;
+      margin-bottom: 18px;
       font-weight: 900;
-      margin-bottom: 16px;
-    }
-
-    .card:nth-child(2) .icon {
-      background: var(--green);
-      color: var(--black);
-    }
-
-    .card:nth-child(3) .icon {
-      background: var(--orange);
-      color: var(--white);
-    }
-
-    .card:nth-child(4) .icon {
-      background: var(--black);
-      color: var(--yellow);
     }
 
     .card h3 {
-      margin: 0 0 10px;
-      font-size: 18px;
-      color: var(--black);
+      color: var(--primary);
+      font-size: 20px;
+      margin-bottom: 10px;
     }
 
     .card p {
-      margin: 0;
       color: var(--muted);
-      line-height: 1.55;
+      font-size: 15px;
     }
-
-    /* =====================================================
-       BLOCOS DIVIDIDOS
-    ===================================================== */
 
     .split {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 42px;
       align-items: center;
     }
 
-    .box {
-      background: var(--white);
-      border: 1px solid var(--line);
+    .split-image {
       border-radius: var(--radius);
-      padding: 34px;
-      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      min-height: 410px;
+      box-shadow: var(--shadow);
+      background: #e5e7eb;
     }
 
-    .box-highlight {
-      background:
-        linear-gradient(135deg, rgba(19, 155, 215, 0.15), rgba(255, 255, 255, 1)),
-        var(--white);
-      border-left: 7px solid var(--blue);
+    .split-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 410px;
+      object-fit: cover;
     }
 
-    .box h2 {
-      margin-top: 0;
-      color: var(--black);
+    .split-content h2 {
+      color: var(--primary);
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+      margin-bottom: 18px;
+      letter-spacing: -0.04em;
     }
 
-    .box p {
+    .split-content p {
       color: var(--muted);
-      line-height: 1.65;
+      font-size: 17px;
+      margin-bottom: 14px;
     }
 
-    .list {
+    .checklist {
       display: grid;
-      gap: 14px;
-      margin: 22px 0 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .list li {
-      display: flex;
-      align-items: flex-start;
       gap: 12px;
-      color: var(--muted);
-      line-height: 1.55;
+      margin: 24px 0;
     }
 
-    .check {
-      flex: 0 0 25px;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      background: var(--blue);
-      color: var(--white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
+    .checklist li {
+      list-style: none;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 13px 16px;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      color: var(--accent);
+      margin-right: 8px;
       font-weight: 900;
     }
 
-    /* =====================================================
-       GALERIA
-    ===================================================== */
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .gallery-item {
-      height: 240px;
-      border-radius: 24px;
-      border: 1px solid var(--line);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      position: relative;
-    }
-
-    .gallery-item::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.35));
-    }
-
-    .gallery-item-1 {
-      background-image: url("../assets/piso-01.jpg");
-    }
-
-    .gallery-item-2 {
-      background-image: url("../assets/piso-02.jpg");
-    }
-
-    .gallery-item-3 {
-      background-image: url("../assets/piso-03.jpg");
-    }
-
-    /* =====================================================
-       PASSOS
-    ===================================================== */
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 13px;
-    }
-
-    .step {
+    .product-section {
       background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 22px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .product-section:nth-of-type(even) {
+      background: #f1f5f9;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .product-copy .tag {
+      display: inline-flex;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--accent-light);
+      color: var(--secondary);
+      font-weight: 800;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .product-copy h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      color: var(--primary);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      margin-bottom: 16px;
+    }
+
+    .product-copy p {
       color: var(--muted);
-      line-height: 1.45;
-      box-shadow: var(--shadow-soft);
+      font-size: 16.5px;
+      margin-bottom: 12px;
     }
 
-    .step strong {
-      display: block;
-      color: var(--blue);
-      font-size: 28px;
-      margin-bottom: 8px;
+    .product-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
     }
 
-    /* =====================================================
-       FAQ
-    ===================================================== */
+    .product-images img {
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 12px 25px rgba(15, 23, 42, 0.10);
+      background: #e5e7eb;
+    }
+
+    .specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+      margin-bottom: 24px;
+    }
+
+    .specs span {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1e3a8a;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .cta-section {
+      background:
+        linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 58, 138, 0.92)),
+        url("https://d335luupugsy2.cloudfront.net/cms/files/51845/1736774870/%24njowq8fyr6t") center/cover no-repeat;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -0.04em;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.82);
+      font-size: 18px;
+      max-width: 720px;
+      margin: 0 auto 28px;
+    }
 
     .faq {
+      max-width: 900px;
+      margin: 0 auto;
       display: grid;
-      gap: 12px;
+      gap: 14px;
     }
 
-    .faq details {
+    .faq-item {
       background: var(--white);
-      border: 1px solid var(--line);
+      border: 1px solid var(--border);
       border-radius: 18px;
-      padding: 18px;
-      box-shadow: var(--shadow-soft);
+      padding: 22px;
     }
 
-    .faq summary {
-      font-weight: 900;
-      cursor: pointer;
-      color: var(--black);
-    }
-
-    .faq p {
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    /* =====================================================
-       CTA FINAL
-    ===================================================== */
-
-    .final {
-      background:
-        radial-gradient(circle at top left, rgba(19, 155, 215, 0.30), transparent 30%),
-        linear-gradient(135deg, var(--dark-blue), var(--black));
-      color: var(--white);
-      padding: 68px 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .final::after {
-      content: "";
-      position: absolute;
-      right: -42px;
-      bottom: -62px;
-      width: 220px;
-      height: 220px;
-      background: repeating-linear-gradient(
-        -45deg,
-        var(--blue),
-        var(--blue) 7px,
-        transparent 7px,
-        transparent 14px
-      );
-      opacity: 0.32;
-      border-radius: 36px;
-      transform: rotate(12deg);
-    }
-
-    .final .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .final h2 {
-      font-size: clamp(32px, 4vw, 50px);
-      margin: 0 0 14px;
-      letter-spacing: -1.4px;
-    }
-
-    .final p {
-      max-width: 720px;
-      margin: 0 auto 26px;
-      color: rgba(255, 255, 255, 0.78);
+    .faq-item h3 {
+      color: var(--primary);
+      margin-bottom: 8px;
       font-size: 18px;
-      line-height: 1.65;
     }
 
-    .final .btn {
-      background: linear-gradient(135deg, var(--blue), var(--green));
-      color: var(--white);
+    .faq-item p {
+      color: var(--muted);
     }
 
-    /* =====================================================
-       WHATSAPP FLUTUANTE
-    ===================================================== */
+    .footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.75);
+      padding: 34px 0;
+      text-align: center;
+      font-size: 14px;
+    }
 
-    .float-whats {
+    .whatsapp-float {
       position: fixed;
       right: 18px;
       bottom: 18px;
-      z-index: 1000;
+      z-index: 80;
       background: #25d366;
-      color: var(--white);
+      color: #fff;
       border-radius: 999px;
-      padding: 15px 18px;
+      padding: 14px 18px;
       font-weight: 900;
-      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.38);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    /* =====================================================
-       FOOTER
-    ===================================================== */
+    @media (max-width: 920px) {
+      .nav {
+        display: none;
+      }
 
-    .footer {
-      padding: 24px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-      background: var(--white);
-    }
-
-    /* =====================================================
-       RESPONSIVO
-    ===================================================== */
-
-    @media (max-width: 900px) {
       .hero-grid,
-      .split {
+      .split,
+      .product-grid {
         grid-template-columns: 1fr;
       }
 
+      .hero-card {
+        min-height: 360px;
+      }
+
       .cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
 
-      .steps {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero-img {
-        height: 350px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .header-content {
-        min-height: 78px;
-        gap: 12px;
-      }
-
-      .logo img {
-        height: 54px;
-        max-width: 190px;
-      }
-
-      .header-btn {
-        padding: 11px 16px;
-        font-size: 13px;
+      .product-images img {
+        height: 210px;
       }
     }
 
     @media (max-width: 560px) {
-      .site-header {
-        position: relative;
+      .topbar .container {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .header-inner {
+        min-height: 70px;
+      }
+
+      .logo img {
+        height: 36px;
       }
 
       .hero {
-        padding: 44px 0;
+        padding: 46px 0 36px;
       }
 
-      .hero h1 {
-        letter-spacing: -1.4px;
-      }
-
-      .lead {
-        font-size: 17px;
-      }
-
-      .cards,
-      .steps,
-      .gallery {
-        grid-template-columns: 1fr;
+      .hero-actions {
+        flex-direction: column;
       }
 
       .btn {
         width: 100%;
       }
 
-      .header-btn {
-        display: none;
+      .product-images {
+        grid-template-columns: 1fr;
       }
 
-      .hero-img {
-        height: 280px;
+      .product-images img {
+        height: 230px;
       }
 
-      .section {
-        padding: 50px 0;
+      section {
+        padding: 54px 0;
       }
 
-      .float-whats {
+      .whatsapp-float {
         left: 14px;
         right: 14px;
-        text-align: center;
+        justify-content: center;
       }
     }
   </style>
 </head>
 
 <body>
-  <!-- Google Tag Manager noscript -->
+  <!-- Google Tag Manager (noscript) -->
   <noscript>
-    <iframe 
-      src="https://www.googletagmanager.com/ns.html?id=GTM-PDLLHBKV"
-      height="0" 
-      width="0" 
-      style="display:none;visibility:hidden">
-    </iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDLLHBKV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <!-- End Google Tag Manager noscript -->
+  <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-content">
-      <a href="/" class="logo" aria-label="SmartFloor One">
+  <div class="topbar">
+    <div class="container">
+      <span>SmartFloor One • Pisos, tapetes e revestimentos em Anápolis</span>
+      <span>Atendimento rápido pelo WhatsApp</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">
         <img src="../assets/logo.png" alt="SmartFloor One" />
       </a>
 
-      <a 
-        href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20piso%20vin%C3%ADlico%20PVC." 
-        class="header-btn" 
-        target="_blank"
-        rel="noopener">
-        Solicitar orçamento
+      <nav class="nav">
+        <a href="#beneficios">Benefícios</a>
+        <a href="#tipos">Tipos de piso</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+
+      <a class="btn btn-primary" href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20piso%20vin%C3%ADlico.">
+        Orçamento no WhatsApp
       </a>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">
-            Pisos laminados em PVC
-          </span>
-
-          <h1>
-            Segurança, resistência e 
-            <strong>performance</strong> para ambientes exigentes.
-          </h1>
-
-          <p class="lead">
-            Quando o ambiente exige mais, o piso precisa acompanhar. Os pisos 
-            laminados em PVC são desenvolvidos para suportar uso intenso, impacto, 
-            umidade e desgaste contínuo, sem comprometer a segurança e a funcionalidade.
+          <span class="eyebrow">Piso vinílico em Anápolis</span>
+          <h1>Piso vinílico para transformar seu ambiente com conforto, beleza e praticidade.</h1>
+          <p>
+            Soluções em piso vinílico para casas, apartamentos, escritórios, lojas, clínicas e ambientes comerciais.
+            Visual moderno, fácil manutenção e instalação prática para deixar seu espaço mais bonito e funcional.
           </p>
 
-          <div class="cta-row">
-            <a 
-              class="btn btn-primary" 
-              href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20piso%20vin%C3%ADlico%20PVC." 
-              target="_blank"
-              rel="noopener">
-              Solicitar orçamento no WhatsApp
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20piso%20vin%C3%ADlico.">
+              Solicitar orçamento
             </a>
-
-            <a class="btn btn-secondary" href="#beneficios">
-              Ver benefícios
+            <a class="btn btn-outline" href="#tipos">
+              Ver tipos de piso
             </a>
           </div>
 
-          <div class="trust">
-            <span class="pill">Antiderrapante</span>
-            <span class="pill">Alta resistência</span>
-            <span class="pill">Fácil manutenção</span>
+          <div class="hero-list">
+            <span>Ideal para reformas residenciais e comerciais</span>
+            <span>Opções em régua, placa, manta e sistema click</span>
+            <span>Conforto acústico, visual elegante e limpeza simples</span>
           </div>
         </div>
 
         <div class="hero-card">
-          <div class="hero-img"></div>
+          <div class="hero-card-badge">
+            <strong>Acabamento moderno com sensação de aconchego.</strong>
+            <small>Piso vinílico com visual amadeirado, toque confortável e excelente custo-benefício para sua obra ou reforma.</small>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Benefícios -->
-    <section class="section section-white" id="beneficios">
+    <section id="beneficios">
       <div class="container">
-        <div class="section-title">
-          <h2>
-            Um piso técnico para quem precisa de segurança e durabilidade.
-          </h2>
-
+        <div class="section-head">
+          <h2>Por que escolher piso vinílico?</h2>
           <p>
-            São soluções ideais para ambientes que exigem um piso confiável, 
-            com longa vida útil e baixa manutenção no dia a dia.
+            O piso vinílico une estética, conforto e praticidade. É uma solução versátil para quem quer renovar o ambiente com rapidez, beleza e manutenção simples.
           </p>
         </div>
 
         <div class="cards">
           <div class="card">
-            <div class="icon">✓</div>
-            <h3>Mais segurança</h3>
-            <p>Superfície antiderrapante para reduzir riscos no uso diário.</p>
+            <div class="card-icon">1</div>
+            <h3>Conforto térmico e acústico</h3>
+            <p>
+              Ajuda a deixar o ambiente mais agradável no dia a dia, reduzindo a sensação de frio do contrapiso e contribuindo para o conforto sonoro.
+            </p>
           </div>
 
           <div class="card">
-            <div class="icon">✓</div>
-            <h3>Alta resistência</h3>
-            <p>Preparado para desgaste, impacto e circulação intensa.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon">✓</div>
+            <div class="card-icon">2</div>
             <h3>Fácil limpeza</h3>
-            <p>Praticidade na manutenção para ambientes comerciais e operacionais.</p>
+            <p>
+              Superfície prática para manutenção, ideal para casas, apartamentos, escritórios e espaços comerciais que precisam de rotina simples.
+            </p>
           </div>
 
           <div class="card">
-            <div class="icon">✓</div>
-            <h3>Longa vida útil</h3>
-            <p>Desempenho superior mesmo em ambientes exigentes.</p>
+            <div class="card-icon">3</div>
+            <h3>Visual sofisticado</h3>
+            <p>
+              Opções que simulam madeira, cimento e outros acabamentos, criando ambientes modernos, acolhedores e com ótimo acabamento visual.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- O que é / do que é feito -->
-    <section class="section">
+    <section id="do-que-sao-feitos">
       <div class="container split">
-        <div class="box box-highlight">
-          <h2>O que são?</h2>
+        <div class="split-image">
+          <img src="https://d335luupugsy2.cloudfront.net/cms/files/51845/1736774870/%2434vpyd7x57u" alt="Ambiente com piso vinílico" />
+        </div>
 
+        <div class="split-content">
+          <span class="eyebrow">Sobre o material</span>
+          <h2>Do que são feitos os pisos vinílicos?</h2>
           <p>
-            Revestimentos técnicos de alta performance, indicados para ambientes 
-            que exigem resistência, segurança, estabilidade e funcionalidade.
+            Os pisos vinílicos são revestimentos fabricados com materiais sintéticos de alta resistência, geralmente à base de PVC, minerais e aditivos.
+            Essa composição permite diferentes formatos, espessuras e acabamentos para atender ambientes residenciais e comerciais.
+          </p>
+          <p>
+            Além da beleza, o piso vinílico se destaca pela praticidade de instalação, conforto no uso diário, facilidade de limpeza e versatilidade de aplicação em diversos estilos de projeto.
           </p>
 
-          <ul class="list">
-            <li>
-              <span class="check">✓</span>
-              <span>Indicados para áreas de alto tráfego.</span>
-            </li>
-
-            <li>
-              <span class="check">✓</span>
-              <span>Boa performance em ambientes úmidos e operacionais.</span>
-            </li>
-
-            <li>
-              <span class="check">✓</span>
-              <span>Visual profissional com alta resistência no uso diário.</span>
-            </li>
+          <ul class="checklist">
+            <li>Composição resistente e acabamento moderno</li>
+            <li>Opções para uso residencial, comercial e reformas rápidas</li>
+            <li>Aplicação possível sobre bases preparadas, incluindo contrapiso e alguns pisos existentes</li>
+            <li>Texturas e cores que valorizam ambientes internos</li>
           </ul>
-        </div>
 
-        <div>
-          <h2>Do que são feitos?</h2>
-
-          <p class="lead">
-            Fabricados em PVC de alta qualidade, com superfície antiderrapante 
-            e estrutura preparada para impacto, umidade e desgaste contínuo.
-          </p>
-
-          <a 
-            class="btn btn-primary" 
-            href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20piso%20vin%C3%ADlico%20PVC." 
-            target="_blank"
-            rel="noopener">
-            Quero orçamento de piso PVC
+          <a class="btn btn-primary" href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20saber%20qual%20piso%20vin%C3%ADlico%20%C3%A9%20ideal%20para%20meu%20ambiente.">
+            Falar com especialista
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Galeria -->
-    <section class="section section-white">
-      <div class="container">
-        <div class="section-title">
-          <h2>Aplicações para ambientes exigentes</h2>
-
+    <section id="tipos" class="product-section">
+      <div class="container product-grid">
+        <div class="product-copy">
+          <span class="tag">Linha residencial</span>
+          <h2>Linha residencial Ecokap</h2>
           <p>
-            Academias, indústrias, cozinhas, áreas de serviço, ambientes comerciais 
-            e espaços operacionais que precisam de segurança e resistência.
+            Indicada para casas, apartamentos, quartos, salas e ambientes residenciais em geral, a linha residencial une o charme do visual amadeirado à praticidade do piso vinílico.
           </p>
+          <p>
+            É uma opção confortável, resistente, fácil de limpar e pensada para quem busca um ambiente mais bonito, aconchegante e funcional sem abrir mão da praticidade.
+          </p>
+
+          <div class="specs">
+            <span>Uso residencial</span>
+            <span>Visual madeira</span>
+            <span>Fácil conservação</span>
+            <span>Conforto no dia a dia</span>
+          </div>
+
+          <a class="btn btn-primary" href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20da%20linha%20residencial%20de%20piso%20vin%C3%ADlico.">
+            Orçar linha residencial
+          </a>
         </div>
 
-        <div class="gallery">
-          <div class="gallery-item gallery-item-1"></div>
-          <div class="gallery-item gallery-item-2"></div>
-          <div class="gallery-item gallery-item-3"></div>
+        <div class="product-images">
+          <img src="https://d335luupugsy2.cloudfront.net/cms/files/51845/1736774870/%241qyd9uqpuha" alt="Piso vinílico residencial em quarto" />
+          <img src="https://d335luupugsy2.cloudfront.net/cms/files/51845/1736774870/%2434vpyd7x57u" alt="Piso vinílico residencial em sala" />
         </div>
       </div>
     </section>
 
-    <!-- Passos -->
-    <section class="section section-blue">
-      <div class="container">
-        <div class="section-title">
-          <h2>Como solicitar seu orçamento</h2>
+    <section class="product-section">
+      <div class="container product-grid">
+        <div class="product-images">
+          <img src="https://d335luupugsy2.cloudfront.net/cms/files/51845/1736774870/%24p0csfyggukf" alt="Piso vinílico comercial em ambiente de uso intenso" />
+          <img src="https://d335luupugsy2.cloudfront.net/cms/files/51845/1736774870/%24njowq8fyr6t" alt="Piso vinílico comercial em escritório" />
+        </div>
 
+        <div class="product-copy">
+          <span class="tag">Linha comercial</span>
+          <h2>Linha comercial Strongkap</h2>
           <p>
-            Atendimento direto e consultivo para entender o tipo de ambiente, 
-            o uso do piso e a melhor solução para o seu projeto.
+            Desenvolvida para ambientes que exigem mais resistência, a linha comercial é indicada para escritórios, lojas, clínicas, salas comerciais e projetos com maior circulação de pessoas.
           </p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <strong>1</strong>
-            Chame no WhatsApp
-          </div>
-
-          <div class="step">
-            <strong>2</strong>
-            Informe o ambiente
-          </div>
-
-          <div class="step">
-            <strong>3</strong>
-            Envie medidas ou fotos
-          </div>
-
-          <div class="step">
-            <strong>4</strong>
-            Receba orientação técnica
-          </div>
-
-          <div class="step">
-            <strong>5</strong>
-            Tenha seu orçamento
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section section-white">
-      <div class="container split">
-        <div>
-          <div class="section-title">
-            <h2>Dúvidas frequentes</h2>
-          </div>
-
-          <div class="faq">
-            <details>
-              <summary>Esse piso é antiderrapante?</summary>
-              <p>
-                Sim. Os pisos laminados em PVC possuem superfície antiderrapante, 
-                trazendo mais segurança para o uso diário.
-              </p>
-            </details>
-
-            <details>
-              <summary>Pode ser usado em área úmida?</summary>
-              <p>
-                Sim. O PVC oferece boa resistência à umidade, sendo indicado para 
-                ambientes que exigem praticidade e segurança.
-              </p>
-            </details>
-
-            <details>
-              <summary>É indicado para ambientes comerciais?</summary>
-              <p>
-                Sim. É uma excelente opção para academias, indústrias, cozinhas, 
-                áreas de serviço, espaços comerciais e operacionais.
-              </p>
-            </details>
-          </div>
-        </div>
-
-        <div class="box">
-          <h2>Precisa de um piso resistente e seguro?</h2>
-
           <p>
-            Fale com a SmartFloor One e receba uma indicação adequada para o seu 
-            tipo de ambiente e necessidade de uso.
+            Combina beleza, conforto, versatilidade e facilidade de manutenção, sendo uma alternativa moderna para quem precisa de um piso elegante e preparado para a rotina comercial.
           </p>
 
-          <a 
-            class="btn btn-primary" 
-            href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20piso%20vin%C3%ADlico%20PVC." 
-            target="_blank"
-            rel="noopener">
-            Solicitar orçamento
+          <div class="specs">
+            <span>Uso comercial</span>
+            <span>Alta resistência</span>
+            <span>Fácil manutenção</span>
+            <span>Ambientes profissionais</span>
+          </div>
+
+          <a class="btn btn-primary" href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20da%20linha%20comercial%20de%20piso%20vin%C3%ADlico.">
+            Orçar linha comercial
           </a>
         </div>
       </div>
     </section>
 
-    <!-- CTA Final -->
-    <section class="final">
-      <div class="container">
-        <h2>Tenha mais segurança e performance no seu ambiente.</h2>
+    <section class="product-section">
+      <div class="container product-grid">
+        <div class="product-copy">
+          <span class="tag">Piso em manta</span>
+          <h2>Piso vinílico em manta</h2>
+          <p>
+            O piso vinílico em manta é uma solução prática para quem busca cobertura contínua, visual uniforme e boa relação entre custo, agilidade e acabamento.
+          </p>
+          <p>
+            Disponível em diferentes espessuras, atende necessidades variadas do dia a dia e pode ser usado em ambientes residenciais e comerciais de baixo ou médio tráfego, sempre com preparação adequada da base.
+          </p>
 
+          <div class="specs">
+            <span>Rolos de grande área</span>
+            <span>Visual contínuo</span>
+            <span>Limpeza simples</span>
+            <span>Boa opção para reformas</span>
+          </div>
+
+          <a class="btn btn-primary" href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20de%20piso%20vin%C3%ADlico%20em%20manta.">
+            Orçar piso em manta
+          </a>
+        </div>
+
+        <div class="product-images">
+          <img src="https://d335luupugsy2.cloudfront.net/cms/files/51845/1758222231/%2421gnieu11jc" alt="Piso vinílico em manta amadeirado" />
+          <img src="https://d335luupugsy2.cloudfront.net/cms/files/51845/1758220859/%24gaxvzipwy5n" alt="Piso vinílico em manta aplicado em ambiente interno" />
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <div class="container product-grid">
+        <div class="product-images">
+          <img src="https://kapazi.com.br/wp-content/uploads/2022/04/praticlick-01-1024x544-1.png" alt="Piso vinílico Praticlick aplicado em ambiente integrado" />
+          <img src="https://d335luupugsy2.cloudfront.net/cms/files/51845/1758220859/%24gaxvzipwy5n" alt="Piso vinílico em régua com visual amadeirado" />
+        </div>
+
+        <div class="product-copy">
+          <span class="tag">Sistema click</span>
+          <h2>Piso vinílico Praticlick</h2>
+          <p>
+            O piso vinílico Praticlick foi pensado para quem quer renovar o ambiente com mais praticidade e menos bagunça. A instalação é feita sem cola, com réguas que se encaixam por sistema click.
+          </p>
+          <p>
+            É uma opção resistente, fácil de limpar, com visual que simula madeira e contribui para deixar o ambiente mais aconchegante. Ideal para reformas rápidas e para quem busca uma aplicação mais limpa.
+          </p>
+
+          <div class="specs">
+            <span>Instalação sem cola</span>
+            <span>Sistema click</span>
+            <span>Reforma rápida</span>
+            <span>Visual madeira</span>
+          </div>
+
+          <a class="btn btn-primary" href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20de%20piso%20vin%C3%ADlico%20Praticlick.">
+            Orçar Praticlick
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Onde usar piso vinílico?</h2>
+          <p>
+            O piso vinílico é uma solução versátil para ambientes internos que precisam de beleza, conforto e praticidade.
+          </p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon">🏠</div>
+            <h3>Residências</h3>
+            <p>
+              Salas, quartos, corredores, apartamentos e áreas internas com necessidade de conforto e estética.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🏢</div>
+            <h3>Comércios</h3>
+            <p>
+              Lojas, salas comerciais, escritórios, clínicas e espaços com fluxo de clientes.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🛠️</div>
+            <h3>Reformas</h3>
+            <p>
+              Ambientes que precisam de renovação rápida, com bom acabamento e visual moderno.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Quer saber qual piso vinílico combina melhor com o seu projeto?</h2>
         <p>
-          Os pisos laminados em PVC oferecem resistência, praticidade e longa vida útil 
-          para espaços que precisam de um revestimento confiável.
+          Fale com a SmartFloor One e receba orientação para escolher a melhor opção para sua casa, empresa, loja, clínica ou escritório.
         </p>
 
-        <a 
-          class="btn" 
-          href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20piso%20vin%C3%ADlico%20PVC." 
-          target="_blank"
-          rel="noopener">
-          Falar com especialista
+        <a class="btn btn-primary" href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20piso%20vin%C3%ADlico%20para%20meu%20projeto.">
+          Chamar no WhatsApp
         </a>
+      </div>
+    </section>
+
+    <section id="duvidas">
+      <div class="container">
+        <div class="section-head">
+          <h2>Dúvidas frequentes</h2>
+          <p>
+            Algumas respostas rápidas para ajudar na escolha do piso vinílico ideal.
+          </p>
+        </div>
+
+        <div class="faq">
+          <div class="faq-item">
+            <h3>Piso vinílico é fácil de limpar?</h3>
+            <p>
+              Sim. O piso vinílico é conhecido pela manutenção simples e limpeza prática, sendo uma ótima opção para a rotina de casas e empresas.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Serve para ambiente comercial?</h3>
+            <p>
+              Sim. Existem linhas específicas para uso comercial, com maior resistência e indicadas para locais com circulação de pessoas.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Posso instalar sobre piso existente?</h3>
+            <p>
+              Em muitos casos, sim, desde que a base esteja corretamente preparada, nivelada, limpa e adequada para receber o revestimento.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Qual tipo de piso vinílico devo escolher?</h3>
+            <p>
+              Depende do uso do ambiente, fluxo de pessoas, estilo desejado e condição da base. A SmartFloor One pode orientar a melhor opção para o seu projeto.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- WhatsApp Flutuante -->
-  <a 
-    class="float-whats" 
-    href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20piso%20vin%C3%ADlico%20PVC." 
-    target="_blank"
-    rel="noopener">
+  <a class="whatsapp-float" href="https://wa.me/5562985535424?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20piso%20vin%C3%ADlico.">
     WhatsApp
   </a>
 
-  <!-- Footer -->
   <footer class="footer">
-     <div class="container">
-      <div>SmartFloor One • Soluções em tapetes, pisos e revestimentos</div>
+    <div class="container">
+      <p>SmartFloor One • Pisos vinílicos, tapetes, gramas e revestimentos</p>
       <small>Desenvolvido por Mikael Nakano</small>
     </div>
   </footer>
 </body>
 </html>
+```
